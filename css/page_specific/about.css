@@ -1,0 +1,321 @@
+/* 关于我页面 - 赛博朋克风格 */
+
+.main-content {
+    min-height: 100vh;
+    padding: 100px 0 50px;
+    background: var(--bg-dark);
+}
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* 左侧个人信息栏 */
+.personal-info-sidebar {
+    background: rgba(26, 26, 46, 0.6);
+    border: 1px solid rgba(0, 246, 255, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-value {
+    color: var(--cyber-blue);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.info-divider {
+    position: absolute;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, var(--cyber-blue), transparent);
+    box-shadow: 0 0 10px var(--cyber-blue);
+}
+
+/* 右侧内容网格 */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    grid-auto-rows: min-content;
+}
+
+/* 卡片通用样式 */
+.card {
+    background: rgba(28, 29, 44, 0.5);
+    border: 1px solid rgba(0, 246, 255, 0.3);
+    border-radius: 12px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 246, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.card:hover {
+    border-color: var(--cyber-blue);
+    box-shadow: 0 0 20px rgba(0, 246, 255, 0.3);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+/* 技能矩阵卡片样式 */
+.skills-matrix-card {
+    border-color: rgba(255, 0, 255, 0.4);
+}
+
+.skills-matrix-card:hover {
+    border-color: var(--cyber-magenta);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+/* 卡片头部 */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    color: var(--cyber-blue);
+    text-shadow: var(--glow-blue);
+    margin: 0;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+/* 技能胶囊样式 */
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-pill {
+    background: rgba(0, 246, 255, 0.1);
+    border: 1px solid rgba(0, 246, 255, 0.3);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    color: var(--cyber-blue);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-pill:hover {
+    background: rgba(0, 246, 255, 0.2);
+    border-color: var(--cyber-blue);
+    box-shadow: 0 0 10px rgba(0, 246, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* 项目卡片样式 */
+.project-card {
+    grid-column: span 2;
+    min-height: 300px;
+}
+
+.project-item {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 246, 255, 0.2);
+}
+
+.project-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    color: var(--cyber-blue);
+    margin-bottom: 8px;
+}
+
+.project-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-pill {
+    background: rgba(255, 0, 255, 0.1);
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    border-radius: 16px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    color: var(--cyber-magenta);
+    transition: all 0.3s ease;
+}
+
+.tech-pill:hover {
+    background: rgba(255, 0, 255, 0.2);
+    border-color: var(--cyber-magenta);
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.4);
+}
+
+/* 教育背景卡片 */
+.education-item h4 {
+    color: var(--cyber-blue);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.education-school {
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.education-period {
+    color: var(--cyber-magenta);
+    font-size: 0.9rem;
+}
+
+/* 个人理念卡片 */
+.philosophy-card {
+    border-color: rgba(255, 0, 255, 0.4);
+}
+
+.philosophy-card:hover {
+    border-color: var(--cyber-magenta);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+.philosophy-quote {
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    padding-left: 20px;
+    border-left: 3px solid var(--cyber-magenta);
+    box-shadow: -5px 0 10px rgba(255, 0, 255, 0.3);
+    position: relative;
+}
+
+.philosophy-quote::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--cyber-magenta);
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    opacity: 0.3;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .about-container {
+        grid-template-columns: 280px 1fr;
+        gap: 30px;
+    }
+    
+    .content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 968px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .personal-info-sidebar {
+        position: static;
+        order: -1;
+    }
+    
+    .info-divider {
+        display: none;
+    }
+    
+    .project-card {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 15px;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .skill-pills {
+        gap: 8px;
+    }
+    
+    .skill-pill {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+} 

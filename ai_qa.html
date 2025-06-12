@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI问答 - 刘翔</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/page_specific/ai_qa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Glitch过渡动画覆盖层 -->
+    <div class="glitch-overlay" id="glitchOverlay">
+        <div class="glitch-text">LOADING...</div>
+        <div class="loading-bar"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">LX</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="about.html" class="nav-link">关于我</a></li>
+                <li><a href="ai_qa.html" class="nav-link active">AI问答</a></li>
+            </ul>
+            <a href="resume.pdf" class="download-btn" download>下载简历</a>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 页面标题 -->
+            <section class="page-header">
+                <h1 class="page-title cyber-text">AI助手</h1>
+                <p class="page-subtitle">与AI对话，了解更多关于我的信息</p>
+            </section>
+
+            <!-- 终端聊天界面 -->
+            <div class="terminal-container" id="terminalContainer">
+                <!-- 终端头部 -->
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span class="control-btn close"></span>
+                        <span class="control-btn minimize"></span>
+                        <span class="control-btn maximize"></span>
+                    </div>
+                    <div class="terminal-title">AI_Assistant@LiuXiang:~$</div>
+                    <div class="terminal-status">
+                        <span class="status-indicator" id="statusIndicator">●</span>
+                        <span id="statusText">在线</span>
+                    </div>
+                </div>
+
+                <!-- 聊天区域 -->
+                                 <div class="chat-area" id="chatArea">
+                     <div class="system-message">
+                         <span class="timestamp">[刘翔]</span>
+                         <span class="message-text">您好！我是刘翔，有什么想了解的吗？</span>
+                     </div>
+                 </div>
+
+                <!-- 输入区域 -->
+                <div class="input-area">
+                                     <div class="input-prompt">
+                     <span class="prompt-symbol">$</span>
+                     <input type="text" id="messageInput" placeholder="请输入您的问题..." class="message-input">
+                     <button id="sendBtn" class="send-btn">
+                         <span class="send-icon">➤</span>
+                     </button>
+                 </div>
+                </div>
+            </div>
+
+            <!-- 快速问题建议 -->
+            <div class="quick-questions" id="quickQuestions">
+                <h3 class="quick-title">快速问题</h3>
+                <div class="question-buttons">
+                    <button class="question-btn" data-question="介绍一下你的技能和专长">技能专长</button>
+                    <button class="question-btn" data-question="你有什么项目经验">项目经验</button>
+                    <button class="question-btn" data-question="你的教育背景和工作经历">教育背景</button>
+                    <button class="question-btn" data-question="如何联系你">联系方式</button>
+                    <button class="question-btn" data-question="你对AI和AIGC的看法">AI观点</button>
+                    <button class="question-btn" data-question="你的职业发展规划">职业规划</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container footer-content">
+            <a href="https://github.com/xcool2046" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="tel:15757198472" class="social-link">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="mailto:x233577@163.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <div class="footer-text">
+            © 2025 刘翔 - 网络工程专业 | 浙江传媒学院
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/ai_chat.js"></script>
+</body>
+</html> 
