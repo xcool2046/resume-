@@ -32,11 +32,11 @@ Cursor、GitHub Copilot辅助开发、大模型应用、ComfyUI工作流、Promp
 微信小程序云开发，完整电商闭环
 商品管理、购物车、微信支付等核心功能
 
-### AI医学影像分析平台 - 前端重构
+### AI医学影像分析平台 - 前端重构  [在线体验](https://yii233.netlify.app/#dashboard)
 React + Ant Design + ECharts
 UI/UX重新设计，提升信息展示清晰度50%
 
-### 旅U（旅行社交平台）- 前端原型
+### 旅U（旅行社交平台）- 前端原型  [在线体验](https://t-u.netlify.app)
 React单页面应用，响应式设计
 快速交付高保真原型，成功部署上线
 
